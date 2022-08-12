@@ -10,6 +10,8 @@ if (app.Environment.IsDevelopment())
 	app.UseDeveloperExceptionPage();
 }
 
+app.UseStaticFiles();
+
 app.UseRouting();
 
 //app.MapGet("/", () => app.Configuration["CustomerGreeting"]);
@@ -19,10 +21,10 @@ app.MapGet("/throw", () =>
 	throw new ApplicationException("Error");
 });
 
-
-
 //app.MapDefaultControllerRoute();
 
-app.MapControllerRoute(name:"default", pattern:"{controller=Home}/{action=Index}/{id?}");
+app.MapControllerRoute(
+	name:"default", 
+	pattern:"{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
