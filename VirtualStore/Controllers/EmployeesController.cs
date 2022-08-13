@@ -17,5 +17,15 @@ namespace VirtualStore.Controllers
 			var result = employees;
 			return View(result);
 		}
+
+		public IActionResult Details(int id)
+		{
+			var employee = employees.FirstOrDefault(x => x.Id == id);
+
+			if(employee == null)
+				return NotFound();
+
+			return View(employee);
+		}
 	}
 }

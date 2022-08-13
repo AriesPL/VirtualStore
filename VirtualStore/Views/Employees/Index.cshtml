@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<VirtualStore.Models.Employee>
 
 <div class="container">
-    <h3>Семья</h3>
+    <h3>Сотрудник</h3>
 
     <table class="table">
         <thead>
@@ -21,7 +21,7 @@
                     <td>@employee.SecondName</td>
                     <td>@employee.Age</td>
                     <td>
-                        <a href="~/">Инфо</a>
+                        <a asp-action="Details" asp-route-Id="@employee.Id">Инфо</a>
                     </td>
                 </tr>
             }
