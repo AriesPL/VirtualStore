@@ -9,9 +9,9 @@ namespace VirtualStore.Controllers
 			return View();
 		}
 
-		public IActionResult Result()
+		public IActionResult Error()
 		{
-			return Content("Hi");
+			return View();
 		}
 	}
 }
