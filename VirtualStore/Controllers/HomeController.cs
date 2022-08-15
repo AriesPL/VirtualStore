@@ -18,5 +18,10 @@ namespace VirtualStore.Controllers
         {
 			return View();
         }
+		
+		public IActionResult ContactUs()
+        {
+			return View();
+        }
 	}
 }
