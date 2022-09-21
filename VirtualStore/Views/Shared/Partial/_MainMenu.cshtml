@@ -7,7 +7,7 @@
                 <li><a href="shop.html">Products</a></li>
                 <li><a href="product-details.html">Product Details</a></li>
                 <li><a href="checkout.html">Checkout</a></li>
-                <li><a href="cart.html">Cart</a></li>
+                <li><a asp-controller="Home" asp-action="Cart" >Cart</a></li>
                 <li><a href="login.html">Login</a></li>
             </ul>
         </li>
@@ -18,8 +18,8 @@
                 <li><a asp-controller="Blogs" asp-action="Blog">Blog Single</a></li>
             </ul>
         </li>
-        <li><a href="404.html">404</a></li>
-        <li><a href="contact-us.html">Contact</a></li>
+        <li><a asp-controller="Home" asp-action="Error">404</a></li>
+        <li><a asp-controller="Home" asp-action="ContactUs">Contact</a></li>
         <li><a asp-controller="Employees" asp-action="Index" >Сотрудники</a></li>
 
     </ul>

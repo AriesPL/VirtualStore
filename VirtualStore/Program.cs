@@ -14,15 +14,11 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-//app.MapGet("/", () => app.Configuration["CustomerGreeting"]);
-
 app.MapGet("/throw", () =>
 {
 	throw new ApplicationException("Error");
 });
-
-//app.MapDefaultControllerRoute();
-
+ 
 app.MapControllerRoute(
 	name:"default", 
 	pattern:"{controller=Home}/{action=Index}/{id?}");
